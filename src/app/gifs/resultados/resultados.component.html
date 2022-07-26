@@ -1,0 +1,22 @@
+<!-- <ul>
+    <li *ngFor="let gif of resultadorGifs">
+        {{ gif.title }}
+    </li>
+</ul> -->
+
+<div class="row" *ngIf="resultadorGifs.length > 0; else vacio">
+    <div *ngFor="let gif of resultadorGifs" class="col-sm-6 col-md-4 animate__animated animate__fadeIn">
+        <div class="card">
+            <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="image-card-top" />
+            <div class="card-body">
+                <p class="card-text">{{ gif.title }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #vacio>
+    <div class="row">
+        <h1>No hay resultados para la busqueda...</h1>
+    </div>
+</ng-template>

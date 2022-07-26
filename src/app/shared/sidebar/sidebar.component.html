@@ -1,0 +1,8 @@
+<div class="border-right bg-dark p-3" id="sideBar">
+    <h3 class="text-light">Gifs App</h3>
+    <hr class="test-white" />
+    <div class="list-goup list-reset">
+        <a (click)="buscar(busqueda)" *ngFor="let busqueda of busquedas" href="#" class="list-group-item list-group-item-action">{{ busqueda | titlecase }}</a
+    >
+  </div>
+</div>
